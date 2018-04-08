@@ -35,8 +35,16 @@ body {
 .navbar {
   background-color:rgba(21, 31, 33, 0.5) !important;
   border-bottom: 1px solid #dedede;
-  font-family: 'Alegreya Sans', sans-serif;   
+  font-family: 'Alegreya Sans', sans-serif;  
 }
+
+/* Fix vertical alignment */
+.navbar-nav,
+.navbar-toggler {
+    position: relative; 
+    top: 6px;
+}
+
 
 .navbar .nav .nav-item .nav-link {
   color: #d1d1d1;
@@ -48,6 +56,12 @@ body {
 
 .navbar-toggler {
     color: white;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    outline:none;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /*HEADER*/
@@ -136,6 +150,8 @@ body {
     background-color:#be2835;
     color:#fff;
     width:50%;
+    display: block;
+    margin: 50px auto 0 auto;
 }
 
 #who .btn-who:hover {
@@ -151,8 +167,21 @@ body {
     padding:5rem 0;
 }
 
+
+
 #work .work-img {
     position:relative;
+}
+
+@media (min-width: 678px) {
+    #work .card {
+        height: 311px;
+    }
+    #work .work-img .card-img-top {
+        height: 185px;
+        width: 100%;
+        display: inline-block;
+    }
 }
 
 #work .work-img .img-overlay {
