@@ -172,8 +172,29 @@ body {
 #work .work-img {
     position:relative;
 }
+/* If there are title changes make sure to change "height: 311px" appropriately */
+@media (min-width: 1200px) {
+    #work .card {
+        height: 311px;
+    }
+    #work .work-img .card-img-top {
+        height: 185px;
+        width: 100%;
+        display: inline-block;
+    }
+}
+@media (min-width: 768px) AND (max-width: 1199px) {
+    #work .card {
+        height: 400px;
+    }
+    #work .work-img .card-img-top {
+        height: 185px;
+        width: 100%;
+        display: inline-block;
+    }
+}
 
-@media (min-width: 678px) {
+@media (min-width: 576px) AND (max-width: 767px) {
     #work .card {
         height: 311px;
     }
